@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Hello, world!</title>
+    <% include ../partials/html_header.html %>
+</head>
+
+<body>
+    <div class="jumbotron">
+        <h1>jumbotron</h1>
+        <p>jumbotron</p>
+        <div class="container">container
+        </div>
+        <div class="container-fluid">container-fluid
+        </div>
+    </div>
+    <div class="jumbotron jumbotron-fluid">
+        <h1>jumbotron-fluid</h1>
+        <p>jumbotron-fluid</p>
+        <div class="container">container
+        </div>
+        <div class="container-fluid">container-fluid
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-4">4/12
+                <div class="btn-group-vertical">
+                    <button type="button" class="btn">
+                            <a href="http://www.apple.com">Apple</a>
+                            <span class="badge badge-light">4</span>
+                            </button>
+                    <button type="button" class="btn">Samsung</button>
+                    <div class="btn-group">
+                        <button type="button" class="btn dropdown-toggle" data-toggle="dropdown">
+                         Sony
+                      </button>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="#">Tablet</a>
+                            <a class="dropdown-item" href="#">Smartphone</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-8">8/12</div>
+        </div>
+    </div>
+
+    <div class="container">
+        <h3>Popover Example</h3>
+        <a href="#" data-trigger="hover" data-toggle="popover" title="Popover Header" data-content="Some content inside the popover">Toggle popover</a>
+    </div>
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-2">2/12</div>
+            <div class="col-md-6">6/12</div>
+            <div class="col-md-4">4/12
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <button data-toggle="collapse" data-target="#demo">Collapsible</button>
+
+        <div id="demo" class="collapse show">
+            Lorem ipsum dolor text....
+        </div>
+    </div>
+
+    <div class="alert alert-success alert-dismissable fade show">
+        <button type="button" class="close" data-dismiss="alert">&times;</button>
+        <strong>Success!</strong> Indicates a successful or positive action.
+    </div>
+
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/js/bootstrap.min.js" integrity="sha384-a5N7Y/aK3qNeh15eJKGWxsqtnX/wWdSZSKp+81YjTmS15nvnvxKHuzaWwXHDli+4" crossorigin="anonymous"></script>
+
+    <script>
+        $('div').addClass('border rounded bg-light text-dark');
+        $('[data-toggle="popover"]').popover();
+    </script>
+
+</body>
+
+</html>

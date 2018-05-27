@@ -1,20 +1,30 @@
 const express = require('express');
+const servlet_app = require('servlets/servlet1');
+const filter_app = require('filters/filter1');
+
+//const fs = require('fs');
+//const http = require('http');
+
+
+
+
+
+
+var rootApp = express();
+var servletApp = servlet_app();
+
 const path = require('path');
 const PORT = process.env.PORT || 5000;
 
+rootApp.use(['/adm*n', '/manager'], servletApp);
 
-const app = express();
+rootApp.use(filter_app({ option1: '1', option2: '2' }));
 
-var post_handler = function(req,res) {
-	res.render('pages/index_post');
-};
+rootApp.use(express.static(path.join(__dirname, 'public')));
+rootApp.set('views', path.join(__dirname, 'views'));
+rootApp.set('view engine', 'ejs');
+rootApp.get('/', (req, res) => res.render('pages/index'));
 
+rootApp.get('/port', (req, res) => res.write(PORT));
 
-app.use(express.static(path.join(__dirname, 'public')));
-app.set('views', path.join(__dirname, 'views'));
-app.set('view engine', 'ejs');
-
-app.get('/', (req, res) => res.render('pages/index'));
-app.post('/',post_handler);
-
-app.listen(PORT, () => console.log(`Listening on ${ PORT }`));
+rootApp.listen(PORT, () => console.log(`Listening on ${ PORT }`));

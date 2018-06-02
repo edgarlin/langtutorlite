@@ -1,5 +1,7 @@
 # LangTutorLite
 
+remote git https://github.com/edgarlin/langtutorlite
+
 ## Running Locally
 
 Make sure you have [Node.js](http://nodejs.org/) and the [Heroku CLI](https://cli.heroku.com/) installed.

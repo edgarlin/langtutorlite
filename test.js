@@ -1,10 +1,18 @@
-const { spawn } = require('child_process');
-const request = require('request');
-const test = require('tape');
+//const { spawn } = require('child_process');
+//const request = require('request');
+//const test = require('tape');
+const express = require('express');
 
 // Start the app
-const env = Object.assign({}, process.env, {PORT: 5000});
-const child = spawn('node', ['index.js'], {env});
+//const env = Object.assign({}, process.env, {PORT: 5000});
+//const child = spawn('node', ['index.js'], {env});
+var app = express();
+
+//console.log(express);
+
+console.log(app);
+
+/*
 
 test('responds to requests', (t) => {
   t.plan(4);
@@ -26,3 +34,5 @@ test('responds to requests', (t) => {
     });
   });
 });
+
+*/

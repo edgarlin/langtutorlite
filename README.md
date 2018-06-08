@@ -1,6 +1,8 @@
 # node.js
 ## global
+https://nodejs.org/api/globals.html
 ## module
+https://nodejs.org/api/modules.html
 
 # LangTutorLite
 remote git https://github.com/edgarlin/langtutorlite

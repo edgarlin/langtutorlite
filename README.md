@@ -1,8 +1,14 @@
 # node.js
-## global
+## global scope
 https://nodejs.org/api/globals.html
-## module
+## module scope
 https://nodejs.org/api/modules.html
+```sh
+const express = require('express');
+const path = require('path');
+...
+```
+
 
 # LangTutorLite
 remote git https://github.com/edgarlin/langtutorlite

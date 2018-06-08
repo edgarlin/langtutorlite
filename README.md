@@ -1,9 +1,38 @@
 # node.js
 ## global scope
 https://nodejs.org/api/globals.html
+
+```sh
+console
+global
+process
+
+Class: Buffer
+__dirname
+__filename
+
+clearImmediate(immediateObject)
+clearInterval(intervalObject)
+clearTimeout(timeoutObject)
+setImmediate(callback[, ...args])
+setInterval(callback, delay[, ...args])
+setTimeout(callback, delay[, ...args])
+
+URL
+URLSearchParams...
+```
+
+
 ## module scope
 https://nodejs.org/api/modules.html
 ```sh
+exports
+require()
+module
+
+ex.
+module.exports = '3';
+
 const express = require('express');
 const path = require('path');
 ...
